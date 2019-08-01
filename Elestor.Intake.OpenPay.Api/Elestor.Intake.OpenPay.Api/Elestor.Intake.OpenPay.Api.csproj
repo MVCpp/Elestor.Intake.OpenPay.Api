@@ -14,12 +14,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Handlers\" />
     <Folder Include="Helpers\" />
     <Folder Include="Log\" />
     <Folder Include="Interfaces\" />
     <Folder Include="DataAccess\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

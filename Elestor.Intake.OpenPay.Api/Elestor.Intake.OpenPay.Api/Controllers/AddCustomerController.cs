@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Openpay.Entities;
+using Elestor.Intake.OpenPay.Api.Handlers;
+using System;
+using Elestor.Intake.OpenPay.Api.Log;
 
 namespace Elestor.Intake.OpenPay.Api.Controllers
 {
@@ -10,11 +11,51 @@ namespace Elestor.Intake.OpenPay.Api.Controllers
     [Route("api/customer")]
     public class AddCustomerController : Controller
     {
+        readonly ILog _log;
 
-        [HttpGet("add")]
-        public async Task<object> AddCustomer(string key)
+        public AddCustomerController(ILog log)
         {
-            return null;
+            _log = log ?? throw new ArgumentNullException(nameof(log), "Cannot be null.");
+        }
+
+        [HttpPost("add")]
+        public IActionResult AddCustomer([FromBody] string key)
+        {
+            if (string.IsNullOrEmpty(key))
+            {
+                //_log.Error(nameof(key).ToString() + "Cannot be null.");
+                //throw new ArgumentNullException(nameof(key), "Cannot be null.");
+            }
+
+            Customer customerCreated = null;
+
+            try
+            {
+                _log.Information("Adding Customer.");
+                var openpayAPI = OpenPayHandler.GetOpenPayInstance();
+
+                Customer customer = new Customer();
+
+                customer.Name = "Net Client";
+                customer.LastName = "C#";
+                customer.Email = "net@c.com";
+                customer.Address = new Address();
+                customer.Address.Line1 = "line 1";
+                customer.Address.PostalCode = "12355";
+                customer.Address.City = "Queretaro";
+                customer.Address.CountryCode = "MX";
+                customer.Address.State = "Queretaro";
+
+                customerCreated = openpayAPI.CustomerService.Create(customer);
+
+            }
+            catch (Exception ex)
+            {
+                _log.Information("Exception while adding customer.");
+                return NotFound();
+            }
+
+            return Ok(customerCreated);
         }
     }
 }

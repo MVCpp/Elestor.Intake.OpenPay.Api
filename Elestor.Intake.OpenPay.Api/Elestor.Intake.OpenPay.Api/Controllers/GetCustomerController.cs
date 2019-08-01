@@ -10,7 +10,7 @@ namespace Elestor.Intake.OpenPay.Api.Controllers
     [Route("api/customer")]
     public class GetCustomerController : Controller
     {
-        [HttpPost("get")]
+        [HttpGet("get")]
         public async Task<object> GetCustomer([FromBody] string some)
         {
             return null;
