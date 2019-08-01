@@ -12,7 +12,7 @@ namespace Elestor.Intake.OpenPay.Api.Controllers
     [Route("api/customer")]
     public class AddCustomerController : Controller
     {
-        readonly ILog _log;
+        private readonly ILog _log;
         public AddCustomerController(ILog log)
         {
             _log = log ?? throw new ArgumentNullException(nameof(log), "Cannot be null.");
