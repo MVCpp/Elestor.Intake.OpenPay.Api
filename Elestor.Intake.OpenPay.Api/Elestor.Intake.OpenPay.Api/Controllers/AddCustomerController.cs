@@ -21,9 +21,9 @@ namespace Elestor.Intake.OpenPay.Api.Controllers
         [HttpPost("add")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult AddCustomer([FromBody] string key)
+        public IActionResult AddCustomer([FromBody] Customer customer)
         {
-            if (string.IsNullOrEmpty(key))
+            if (customer == null)
             {
                 //_log.Error(nameof(key).ToString() + "Cannot be null.");
                 //throw new ArgumentNullException(nameof(key), "Cannot be null.");
@@ -36,17 +36,17 @@ namespace Elestor.Intake.OpenPay.Api.Controllers
                 _log.Information("Adding Customer.");
                 var openpayAPI = OpenPayHandler.GetOpenPayInstance();
 
-                Customer customer = new Customer();
+                //Customer customer = new Customer();
 
-                customer.Name = "Net Client";
-                customer.LastName = "C#";
-                customer.Email = "net@c.com";
-                customer.Address = new Address();
-                customer.Address.Line1 = "line 1";
-                customer.Address.PostalCode = "12355";
-                customer.Address.City = "Queretaro";
-                customer.Address.CountryCode = "MX";
-                customer.Address.State = "Queretaro";
+                //customer.Name = "Net Client";
+                //customer.LastName = "C#";
+                //customer.Email = "net@c.com";
+                //customer.Address = new Address();
+                //customer.Address.Line1 = "line 1";
+                //customer.Address.PostalCode = "12355";
+                //customer.Address.City = "Queretaro";
+                //customer.Address.CountryCode = "MX";
+                //customer.Address.State = "Queretaro";
 
                 customerCreated = openpayAPI.CustomerService.Create(customer);
 
