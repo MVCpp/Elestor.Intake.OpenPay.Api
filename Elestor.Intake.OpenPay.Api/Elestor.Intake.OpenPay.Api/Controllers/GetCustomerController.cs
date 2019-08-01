@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Elestor.Intake.OpenPay.Api.Controllers
 {
     [Produces("application/json")]
     [Route("api/customer")]
+    //[Authorize]
     public class GetCustomerController : Controller
     {
         [HttpGet("get")]
