@@ -1,10 +1,9 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Openpay.Entities;
-using Elestor.Intake.OpenPay.Api.Handlers;
-using System;
+﻿using Elestor.Intake.OpenPay.Api.Handlers;
 using Elestor.Intake.OpenPay.Api.Log;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Openpay.Entities;
+using System;
 
 namespace Elestor.Intake.OpenPay.Api.Controllers
 {
@@ -13,6 +12,7 @@ namespace Elestor.Intake.OpenPay.Api.Controllers
     public class AddCustomerController : Controller
     {
         private readonly ILog _log;
+
         public AddCustomerController(ILog log)
         {
             _log = log ?? throw new ArgumentNullException(nameof(log), "Cannot be null.");
@@ -49,7 +49,6 @@ namespace Elestor.Intake.OpenPay.Api.Controllers
                 //customer.Address.State = "Queretaro";
 
                 customerCreated = openpayAPI.CustomerService.Create(customer);
-
             }
             catch (Exception ex)
             {

@@ -27,7 +27,6 @@ namespace Elestor.Intake.OpenPay.Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddOptions();
 
-
             services.AddSingleton<ILog, Log.Log>();
         }
 
