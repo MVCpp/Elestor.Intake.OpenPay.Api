@@ -4,6 +4,7 @@ using Openpay.Entities;
 using Elestor.Intake.OpenPay.Api.Handlers;
 using System;
 using Elestor.Intake.OpenPay.Api.Log;
+using Microsoft.AspNetCore.Http;
 
 namespace Elestor.Intake.OpenPay.Api.Controllers
 {
@@ -12,13 +13,14 @@ namespace Elestor.Intake.OpenPay.Api.Controllers
     public class AddCustomerController : Controller
     {
         readonly ILog _log;
-
         public AddCustomerController(ILog log)
         {
             _log = log ?? throw new ArgumentNullException(nameof(log), "Cannot be null.");
         }
 
         [HttpPost("add")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult AddCustomer([FromBody] string key)
         {
             if (string.IsNullOrEmpty(key))
@@ -51,7 +53,7 @@ namespace Elestor.Intake.OpenPay.Api.Controllers
             }
             catch (Exception ex)
             {
-                _log.Information("Exception while adding customer.");
+                _log.Error("Exception while adding customer." + ex.ToString());
                 return NotFound();
             }
 

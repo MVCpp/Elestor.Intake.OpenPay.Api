@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Elestor.Intake.OpenPay.Api.Handlers;
+using Elestor.Intake.OpenPay.Api.Log;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Openpay.Entities;
+using System;
+using System.Threading.Tasks;
 
 namespace Elestor.Intake.OpenPay.Api.Controllers
 {
@@ -12,10 +13,35 @@ namespace Elestor.Intake.OpenPay.Api.Controllers
     //[Authorize]
     public class GetCustomerController : Controller
     {
-        [HttpGet("get")]
-        public async Task<object> GetCustomer([FromBody] string some)
+        private readonly ILog _log;
+
+        public GetCustomerController(ILog log)
         {
-            return null;
+            _log = log ?? throw new ArgumentNullException(nameof(log), "Cannot be null.");
+        }
+
+        [HttpPost("get")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult GetCustomer([FromBody] string customer_id)
+        {
+            Customer customer = null;
+
+            try
+            {
+                _log.Information("Getting Customer.");
+
+                var openpayAPI = OpenPayHandler.GetOpenPayInstance();
+
+                customer = openpayAPI.CustomerService.Get(customer_id);
+            }
+            catch (Exception ex)
+            {
+                _log.Error("Exception while getting customer." + ex.ToString());
+                return NotFound();
+            }
+
+            return Ok(customer);
         }
     }
 }
