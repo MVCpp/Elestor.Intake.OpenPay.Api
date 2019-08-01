@@ -8,6 +8,18 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="1.5.2" />
+    <PackageReference Include="Openpay" Version="1.0.24" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Handlers\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Log\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="DataAccess\" />
   </ItemGroup>
 
 </Project>
