@@ -16,9 +16,7 @@
   <ItemGroup>
     <Folder Include="Helpers\" />
     <Folder Include="Log\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="DataAccess\" />
-    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

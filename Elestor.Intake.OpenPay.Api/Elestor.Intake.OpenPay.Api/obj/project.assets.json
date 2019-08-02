@@ -13039,23 +13039,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kym\\.nuget\\packages\\": {},
+    "C:\\Users\\MiguelVazquez\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kym\\Documents\\ELESTOR\\api-openpay\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api.csproj",
+      "projectUniqueName": "C:\\Users\\MiguelVazquez\\Desktop\\openpay\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api.csproj",
       "projectName": "Elestor.Intake.OpenPay.Api",
-      "projectPath": "C:\\Users\\kym\\Documents\\ELESTOR\\api-openpay\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api.csproj",
-      "packagesPath": "C:\\Users\\kym\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kym\\Documents\\ELESTOR\\api-openpay\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\obj\\",
+      "projectPath": "C:\\Users\\MiguelVazquez\\Desktop\\openpay\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api.csproj",
+      "packagesPath": "C:\\Users\\MiguelVazquez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MiguelVazquez\\Desktop\\openpay\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\kym\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MiguelVazquez\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13063,7 +13063,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://vw-artifactory01.mediconnect.net/artifactory/api/nuget/RQI_SJ_RetrievalManagement": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
