@@ -2717,6 +2717,12 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.VisualStudio.SlowCheetah/3.2.20": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.VisualStudio.SlowCheetah.targets": {}
+        }
+      },
       "Microsoft.VisualStudio.Web.CodeGeneration/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -7515,6 +7521,29 @@
         "runtime.json",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Microsoft.VisualStudio.SlowCheetah/3.2.20": {
+      "sha512": "6QwiVReSrzLloizLQUITRvOH+ijhzjFtVzEOoZNlTcI2UlIvvazUuhLS9ZXMq1R/MGSYBH+kOqr6TtSMLX41FQ==",
+      "type": "package",
+      "path": "microsoft.visualstudio.slowcheetah/3.2.20",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.VisualStudio.SlowCheetah.App.targets",
+        "build/Microsoft.VisualStudio.SlowCheetah.ClickOnce.targets",
+        "build/Microsoft.VisualStudio.SlowCheetah.SetupProject.targets",
+        "build/Microsoft.VisualStudio.SlowCheetah.Web.targets",
+        "build/Microsoft.VisualStudio.SlowCheetah.targets",
+        "microsoft.visualstudio.slowcheetah.3.2.20.nupkg.sha512",
+        "microsoft.visualstudio.slowcheetah.nuspec",
+        "readme.txt",
+        "tools/Microsoft.VisualStudio.Jdt.dll",
+        "tools/Microsoft.VisualStudio.SlowCheetah.dll",
+        "tools/Microsoft.VisualStudio.SlowCheetah.xml",
+        "tools/Microsoft.Web.XmlTransform.dll",
+        "tools/Newtonsoft.Json.dll"
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/2.2.3": {
@@ -13033,6 +13062,7 @@
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
+      "Microsoft.VisualStudio.SlowCheetah >= 3.2.20",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3",
       "NLog.Extensions.Logging >= 1.5.2",
       "Openpay >= 1.0.24"
@@ -13096,6 +13126,12 @@
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
+          },
+          "Microsoft.VisualStudio.SlowCheetah": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.2.20, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
