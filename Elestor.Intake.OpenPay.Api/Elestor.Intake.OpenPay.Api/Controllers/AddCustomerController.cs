@@ -25,8 +25,8 @@ namespace Elestor.Intake.OpenPay.Api.Controllers
         {
             if (customer == null)
             {
-                //_log.Error(nameof(key).ToString() + "Cannot be null.");
-                //throw new ArgumentNullException(nameof(key), "Cannot be null.");
+                _log.Error(nameof(key).ToString() + "Cannot be null.");
+                throw new ArgumentNullException(nameof(key), "Cannot be null.");
             }
 
             Customer customerCreated = null;
@@ -35,18 +35,6 @@ namespace Elestor.Intake.OpenPay.Api.Controllers
             {
                 _log.Information("Adding Customer.");
                 var openpayAPI = OpenPayHandler.GetOpenPayInstance();
-
-                //Customer customer = new Customer();
-
-                //customer.Name = "Net Client";
-                //customer.LastName = "C#";
-                //customer.Email = "net@c.com";
-                //customer.Address = new Address();
-                //customer.Address.Line1 = "line 1";
-                //customer.Address.PostalCode = "12355";
-                //customer.Address.City = "Queretaro";
-                //customer.Address.CountryCode = "MX";
-                //customer.Address.State = "Queretaro";
 
                 customerCreated = openpayAPI.CustomerService.Create(customer);
             }
