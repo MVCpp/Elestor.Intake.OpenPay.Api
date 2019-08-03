@@ -13039,23 +13039,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kym\\.nuget\\packages\\": {},
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kym\\Documents\\ELESTOR\\api-openpay\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Source\\Repos\\-Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api.csproj",
       "projectName": "Elestor.Intake.OpenPay.Api",
-      "projectPath": "C:\\Users\\kym\\Documents\\ELESTOR\\api-openpay\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api.csproj",
-      "packagesPath": "C:\\Users\\kym\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kym\\Documents\\ELESTOR\\api-openpay\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\obj\\",
+      "projectPath": "C:\\Users\\Administrator\\Source\\Repos\\-Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Administrator\\Source\\Repos\\-Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\kym\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13122,7 +13122,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Openpay 1.0.24' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Openpay 1.0.24\" se restauró con \".NETFramework,Version=v4.6.1\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v2.2\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Openpay",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.2"
