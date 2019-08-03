@@ -2717,6 +2717,12 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.VisualStudio.SlowCheetah/3.2.20": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.VisualStudio.SlowCheetah.targets": {}
+        }
+      },
       "Microsoft.VisualStudio.Web.CodeGeneration/2.2.3": {
         "type": "package",
         "dependencies": {
@@ -7515,6 +7521,29 @@
         "runtime.json",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Microsoft.VisualStudio.SlowCheetah/3.2.20": {
+      "sha512": "6QwiVReSrzLloizLQUITRvOH+ijhzjFtVzEOoZNlTcI2UlIvvazUuhLS9ZXMq1R/MGSYBH+kOqr6TtSMLX41FQ==",
+      "type": "package",
+      "path": "microsoft.visualstudio.slowcheetah/3.2.20",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.VisualStudio.SlowCheetah.App.targets",
+        "build/Microsoft.VisualStudio.SlowCheetah.ClickOnce.targets",
+        "build/Microsoft.VisualStudio.SlowCheetah.SetupProject.targets",
+        "build/Microsoft.VisualStudio.SlowCheetah.Web.targets",
+        "build/Microsoft.VisualStudio.SlowCheetah.targets",
+        "microsoft.visualstudio.slowcheetah.3.2.20.nupkg.sha512",
+        "microsoft.visualstudio.slowcheetah.nuspec",
+        "readme.txt",
+        "tools/Microsoft.VisualStudio.Jdt.dll",
+        "tools/Microsoft.VisualStudio.SlowCheetah.dll",
+        "tools/Microsoft.VisualStudio.SlowCheetah.xml",
+        "tools/Microsoft.Web.XmlTransform.dll",
+        "tools/Newtonsoft.Json.dll"
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/2.2.3": {
@@ -13033,29 +13062,30 @@
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
+      "Microsoft.VisualStudio.SlowCheetah >= 3.2.20",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3",
       "NLog.Extensions.Logging >= 1.5.2",
       "Openpay >= 1.0.24"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "C:\\Users\\MiguelVazquez\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Source\\Repos\\-Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api.csproj",
+      "projectUniqueName": "C:\\Users\\MiguelVazquez\\Desktop\\openpay\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api.csproj",
       "projectName": "Elestor.Intake.OpenPay.Api",
-      "projectPath": "C:\\Users\\Administrator\\Source\\Repos\\-Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Source\\Repos\\-Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\obj\\",
+      "projectPath": "C:\\Users\\MiguelVazquez\\Desktop\\openpay\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api.csproj",
+      "packagesPath": "C:\\Users\\MiguelVazquez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MiguelVazquez\\Desktop\\openpay\\Elestor.Intake.OpenPay.Api\\Elestor.Intake.OpenPay.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MiguelVazquez\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13063,7 +13093,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://vw-artifactory01.mediconnect.net/artifactory/api/nuget/RQI_SJ_RetrievalManagement": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
@@ -13096,6 +13127,12 @@
             "version": "[2.2.0, )",
             "autoReferenced": true
           },
+          "Microsoft.VisualStudio.SlowCheetah": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.2.20, )"
+          },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[2.2.3, )"
@@ -13122,7 +13159,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"Openpay 1.0.24\" se restauró con \".NETFramework,Version=v4.6.1\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v2.2\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "message": "Package 'Openpay 1.0.24' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
       "libraryId": "Openpay",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.2"

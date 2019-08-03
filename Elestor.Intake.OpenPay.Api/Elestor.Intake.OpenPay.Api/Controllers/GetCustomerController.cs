@@ -1,5 +1,6 @@
 ﻿using Elestor.Intake.OpenPay.Api.Handlers;
 using Elestor.Intake.OpenPay.Api.Log;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Openpay.Entities;
@@ -19,6 +20,7 @@ namespace Elestor.Intake.OpenPay.Api.Controllers
             _log = log ?? throw new ArgumentNullException(nameof(log), "Cannot be null.");
         }
 
+        //[Authorize]
         [HttpPost("get")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
