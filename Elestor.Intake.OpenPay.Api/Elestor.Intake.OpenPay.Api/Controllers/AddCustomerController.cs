@@ -25,8 +25,8 @@ namespace Elestor.Intake.OpenPay.Api.Controllers
         {
             if (customer == null)
             {
-                _log.Error(nameof(key).ToString() + "Cannot be null.");
-                throw new ArgumentNullException(nameof(key), "Cannot be null.");
+                _log.Error(nameof(customer).ToString() + "Cannot be null.");
+                throw new ArgumentNullException(nameof(customer), "Cannot be null.");
             }
 
             Customer customerCreated = null;
